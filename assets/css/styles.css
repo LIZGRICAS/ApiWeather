@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+}
+
+.glitch {
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;  
+    color: #3d5a80;
+    text-shadow: 0.05em 0 0 #b7b7a4,
+      -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+      0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    margin-left: 25%;
+    animation: glitch 2500ms infinite;
+  }
+  
+  .glitch span {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .glitch span:first-child {
+      animation: glitch 650ms infinite;
+        clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+        transform: translate(-0.025em, -0.0125em);
+        opacity: 0.8;
+   }
+   .glitch span:last-child {
+       animation: glitch 375ms infinite;
+        clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
+        transform: translate(0.0125em, 0.025em);
+        opacity: 0.8;
+   }
+  
+  @keyframes glitch {
+    0% {
+      text-shadow: 0.05em 0 0 #b7b7a4,
+        -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+        -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    
+    15% {
+      text-shadow: -0.05em -0.025em 0 #b7b7a4,
+        0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+        -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    
+    50% {
+      text-shadow: 0.025em 0.05em 0 #b7b7a4,
+        0.05em 0 0 rgba(0, 255, 0, 0.75), 
+        0 -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    
+    100% {
+      text-shadow: -0.025em 0 0 #b7b7a4,
+        -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+        -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+  }
+
+.api-box{
+    background: linear-gradient(45deg,#03045e,#457b9d);
+    width: 70vw;
+    height: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenedor {
+    position: absolute;
+    z-index: 1000;
+    top: 350px;
+    margin-left: 15%;
+    margin-right: auto;
+    border-radius: 50px;
+    box-shadow: 0 0 20px #4f9;
+}
+
+#clima {
+    margin-top: 100px;
+    width: 40vw;
+    height: 20vw;
+    background: linear-gradient(45deg,#3d3e3e,#f8f8fb);
+    border-radius: 20px;
+    border: 2px solid darkgray;
+    margin-left: auto;
+    margin-right: auto;
+    color: #f8f8fb;
+    align-items: center;
+}
+
+form img {
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+form {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+#city {
+    width: 70vw;
+    height: 2rem;
+    font-size: 1em;
+    background-color: #ddd;
+    border: 3px solid #9fc;
+    border-radius: 5px;
+    padding: 8px;
+    width: 400px;
+    box-shadow: 0 0 20px #4f9;
+    margin-right:20px ;
+}
+
+
+.button {
+    width:250px;
+    margin-top: 50px;
+    cursor: pointer;
+    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif;
+    color: #fff;
+    background: linear-gradient(45deg,#ff6d1b,#e0417f);
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    line-height: 1.5rem;
+    will-change: transform,filter;
+    float: none;
+    transition: all .15s ease-out;
+    height: auto;
+    border-radius: 100px;
+    transform: rotateX(0) rotateY(0) scale(1);
+    filter: drop-shadow(0 15px 15px rgba(0,0,0,.3));
+    font-weight: 600;
+    perspective-origin: 0 0;
+    letter-spacing: 0;
+    transform: rotateY(0deg) rotateX(0deg) scale(1);
+    perspective: 379.78px;
+    filter: drop-shadow(rgba(230, 75, 117, 0.37) 0px 10px 15px);
+}
+
+#clima p {
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* fondo */
+#clouds{
+	padding: 100px 0;
+	background: #c9dbe9;
+	background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+}
+
+/*Time to finalise the cloud shape*/
+.cloud {
+	width: 200px; height: 60px;
+	background: #fff;
+	
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+	
+	position: relative; 
+}
+
+.cloud:before, .cloud:after {
+	content: '';
+	position: absolute; 
+	background: #fff;
+	width: 100px; height: 80px;
+	position: absolute; top: -15px; left: 10px;
+	
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+	width: 120px; height: 120px;
+	top: -55px; left: auto; right: 15px;
+}
+
+/*Time to animate*/
+.x1 {
+	-webkit-animation: moveclouds 15s linear infinite;
+	-moz-animation: moveclouds 15s linear infinite;
+	-o-animation: moveclouds 15s linear infinite;
+}
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+	left: 200px;
+	
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+	opacity: 0.6; /*opacity proportional to the size*/
+	
+	/*Speed will also be proportional to the size and opacity*/
+	/*More the speed. Less the time in 's' = seconds*/
+	-webkit-animation: moveclouds 25s linear infinite;
+	-moz-animation: moveclouds 25s linear infinite;
+	-o-animation: moveclouds 25s linear infinite;
+}
+
+.x3 {
+	left: -250px; top: -200px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+.x4 {
+	left: 470px; top: -250px;
+	
+	-webkit-transform: scale(0.75);
+	-moz-transform: scale(0.75);
+	transform: scale(0.75);
+	opacity: 0.75; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 18s linear infinite;
+	-moz-animation: moveclouds 18s linear infinite;
+	-o-animation: moveclouds 18s linear infinite;
+}
+
+.x5 {
+	left: -150px; top: -150px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+@-webkit-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-moz-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
